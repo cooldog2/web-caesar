@@ -37,9 +37,9 @@ def rotate_character(char, rot):
         rotation = char
     return rotation
 
-def encrypt(message, rot):    
+def encrypt(message, rot):
     enc_cypher = []
-    for m in text:
+    for m in message:
         position = rotate_character(m, rot)
         enc_cypher.append(position)
     response = ''.join(enc_cypher)
