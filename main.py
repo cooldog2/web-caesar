@@ -51,8 +51,8 @@ class MainHandler(webapp2.RequestHandler):
         encrypted_message = caesar.encrypt(message, rotation) # What user typed in (message and rotation)
         # encodes all special characters that may interperted as html and replaces character with encoded version
         escaped_message = cgi.escape(encrypted_message)
-        # after program encrypts message, call the build_page function
-        content = build_page(encrypted_message)
+        # after program encrypts message, call the builSd_page function
+        content = build_page(escaped_message)
         self.response.write(content)
 
 app = webapp2.WSGIApplication([
